@@ -22,17 +22,23 @@ export default class Body extends React.Component {
           <Row>
             <Col md={4}>
               <h2>Experience</h2>
-              <p>Adipisicing ratione incidunt eaque expedita rerum porro inventore. Nihil sit ipsam iure officiis sit eos at quibusdam natus dignissimos natus dolore! Vel doloremque ipsa alias nihil harum laborum necessitatibus rerum?</p>
+              <p>I am a Software Engineer with a background in Sales and Business Development across a variety of industries.</p>
               <p><Button>View details »</Button></p>
             </Col>
             <Col md={4}>
               <h2>About Me</h2>
-              <p>Sit quia nemo quis enim provident porro eaque accusamus tenetur provident aliquid commodi? Velit nesciunt maiores obcaecati totam praesentium sint vitae exercitationem quaerat maxime iusto et! Consequatur aspernatur sit impedit.</p>
+              <p>I love to run and have completed 4 full marathons. I'm a lifelong learner and student of Philosophy. </p>
               <p><Button>View details »</Button></p>
             </Col>
             <Col md={4}>
-              <h2>Heading</h2>
-              <p>Dolor aliquid dolores perferendis repellendus cum! Quam maiores blanditiis cupiditate voluptatibus voluptas aliquid nisi placeat tempora. Rem debitis accusamus pariatur officia corrupti. Architecto fuga reiciendis quos rem hic? Suscipit dignissimos.</p>
+              <h2>Projects</h2>
+              <p>
+                <ul>
+                  <li>GrannyMeds</li>
+                  <li>MarkdownParsingApp</li>
+                  <li>TetrisReact</li>
+                </ul>
+              </p>
               <p><Button>View details »</Button></p>
             </Col>
           </Row>
