@@ -1,8 +1,8 @@
-import React from 'react';
-import {Button, Grid, Image, Jumbotron, Row, Col} from 'react-bootstrap'
+import React, { Component } from 'react';
+import { Button, Grid, Image, Jumbotron, Row, Col} from 'react-bootstrap'
 import ConnectWithMe from './ConnectWithMe';
 
-export default class Body extends React.Component {
+export default class Body extends Component {
   render() {
     return (
       <div>

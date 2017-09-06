@@ -1,22 +1,39 @@
-var path = require('path')
-
+const webpack = require('webpack')
+const path = require('path')
 module.exports = {
+  // Which file is the entry point to the application
   entry: './src/App.js',
-  output: {
-    path: path.join(__dirname, 'public'),
-    filename: 'bundle.js',
-    publicPath: 'public/'
+  // Which file types are in our project, and where they are located
+  resolve: {
+    extensions: ['.js', '.jsx']
   },
+  // Where to output the final bundled code to
+  output: {
+    filename: 'bundle.js',
+    path: path.resolve(__dirname, 'public'),
+    sourceMapFilename: 'bundle.map.js'
+  },
+  // devtool: '#source-map',
   module: {
+    // How to process project files with loaders
     loaders: [
-      // Used for compiling ES2015 JavaScript
-      { test: /\.js/, loader: 'babel-loader' },
-      // Used for Bootstrap Less Source Files
-      { test: /\.less/, loader: 'style-loader!css-loader!less-loader' },
-      // Used for Bootstrap Less Source Files
-      { test: /\.css/, loader: 'style-loader!css-loader' },
-      // Used for Bootstrap Glyphicon Fonts
-      { test: /\.(woff2|woff|ttf|svg|eot)$/, loader: 'file-loader' }
+      // Process any .js or .jsx file with Babel
+      {
+        test: /\.jsx?$/,
+        exclude: /node_modules/,
+        loaders: ['babel-loader']
+      },
+      {
+        test: /\.css$/,
+        loader: 'style-loader!css-loader!less-loader'
+      },
+      {
+        test: /\.(png|jpg|gif|svg|eot|ttf|woff|woff2)$/,
+        loader: 'url-loader',
+        options: {
+          limit: 10000
+        }
+      }
     ]
   }
-};
+}
