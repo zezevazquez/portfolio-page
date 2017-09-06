@@ -10,7 +10,7 @@ module.exports = {
   // Where to output the final bundled code to
   output: {
     filename: 'bundle.js',
-    path: path.resolve(__dirname, 'public'),
+    path: path.resolve(__dirname, 'bundle'),
     sourceMapFilename: 'bundle.map.js'
   },
   // devtool: '#source-map',
