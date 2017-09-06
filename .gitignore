@@ -1,5 +1,5 @@
 node_modules
 .babelrc
 *lock*
-public/
+bundle/
 *delete*
