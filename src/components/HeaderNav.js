@@ -1,7 +1,7 @@
-import React from 'react';
-import {Navbar, Nav, NavItem} from 'react-bootstrap';
+import React, { Component } from 'react';
+import { Navbar, Nav, NavItem } from 'react-bootstrap';
 
-export default class HeaderNav extends React.Component {
+export default class HeaderNav extends Component {
   render() {
     let brand = <a href=''>LinkedIn</a>;
     return (

@@ -1,8 +1,8 @@
-import React from 'react';
-import {Button, ButtonGroup,ButtonToolbar, Modal} from 'react-bootstrap';
-import SocialIcons from './social';
+import React, { Component } from 'react';
+import { Button, ButtonGroup,ButtonToolbar, Modal } from 'react-bootstrap';
+import SocialIcons from './SocialMediaIcons';
 
-export default class ConnectWithMe extends React.Component {
+export default class ConnectWithMe extends Component {
   constructor() {
     super();
     this.closeModal = this.closeModal.bind(this);
