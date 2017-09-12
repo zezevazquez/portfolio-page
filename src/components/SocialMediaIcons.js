@@ -6,10 +6,8 @@ var urls = [
   'http://linkedin.com/in/zezevazquez',
   'http://github.com/zezevazquez'
 ];
-export default class Social extends Component{
-  render() {
+export default function Social(){
     return (
       <SocialIcons urls={urls} />
     )
-  }
 }
