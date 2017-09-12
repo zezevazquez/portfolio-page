@@ -8,15 +8,15 @@ export default class HeaderNav extends Component {
       <Navbar fixedTop inverse defaultExpanded>
         <Navbar.Header>
           <Navbar.Brand>
-            <a href="#">Zeze's</a>
+            <a href="/">Zeze's</a>
           </Navbar.Brand>
           <Navbar.Toggle />
         </Navbar.Header>
         <Navbar.Collapse>
           <Nav>
-            <NavItem>Projects</NavItem>
-            <NavItem>About</NavItem>
-            <NavItem>Experience</NavItem>
+            <NavItem href="/projects">Projects</NavItem>
+            <NavItem href="/experience">Experience</NavItem>
+            <NavItem href="/about">About</NavItem>
           </Nav>
         </Navbar.Collapse>
       </Navbar>
