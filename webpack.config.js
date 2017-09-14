@@ -1,39 +1,26 @@
-const webpack = require('webpack')
-const path = require('path')
 module.exports = {
-  // Which file is the entry point to the application
-  entry: './src/App.js',
-  // Which file types are in our project, and where they are located
-  resolve: {
-    extensions: ['.js', '.jsx']
-  },
-  // Where to output the final bundled code to
-  output: {
-    filename: 'bundle.js',
-    path: path.resolve(__dirname, 'bundle'),
-    sourceMapFilename: 'bundle.map.js'
-  },
-  // devtool: '#source-map',
-  module: {
-    // How to process project files with loaders
-    loaders: [
-      // Process any .js or .jsx file with Babel
-      {
-        test: /\.jsx?$/,
-        exclude: /node_modules/,
-        loaders: ['babel-loader']
-      },
-      {
-        test: /\.css$/,
-        loader: 'style-loader!css-loader!less-loader'
-      },
-      {
-        test: /\.(png|jpg|gif|svg|eot|ttf|woff|woff2)$/,
-        loader: 'url-loader',
-        options: {
-          limit: 10000
-        }
-      }
-    ]
-  }
-}
+	entry: './src/index.js',
+	output: {
+		path: __dirname,
+		publicPath: '/',
+		filename: 'bundle.js'
+	},
+	module: {
+		loaders: [
+			{
+				exclude: /node_modules/,
+				loader: 'babel-loader',
+				query: {
+					presets: ['react', 'es2015', 'stage-1']
+				}
+			}
+		]
+	},
+	resolve: {
+		extensions: ['.js', '.jsx']
+	},
+	devServer: {
+		historyApiFallback: true,
+		contentBase: './'
+	}
+};
