@@ -11,14 +11,12 @@ import About from './pages/About'
 
 render(
   <BrowserRouter>
-    <div>
       <Switch>
         <Route path="/about" component={About} />
         <Route path="/projects" component={Projects} />
         <Route path="/experience" component={Experience} />
         <Route path="/" component={Welcome} />
       </Switch>
-    </div>
   </BrowserRouter>,
   document.querySelector('#app')
 )

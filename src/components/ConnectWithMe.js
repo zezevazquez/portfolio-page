@@ -23,7 +23,7 @@ export default class ConnectWithMe extends Component {
 
   render() {
     return (
-      <p>
+      <div>
         <Button bsStyle='primary' bsSize='large' onClick={this.openModal} active>Connect »</Button>
         <Modal animation show={this.state.open} onHide={this.closeModal}>
           <Modal.Header style={{textAlign: "center"}} closeButton>
@@ -40,7 +40,7 @@ export default class ConnectWithMe extends Component {
             </ButtonToolbar>
           </Modal.Footer>
         </Modal>
-      </p>
+      </div>
     );
   }
 }
