@@ -1,22 +1,27 @@
-import React from 'react'
-import { render } from 'react-dom'
-import { BrowserRouter, Route, Switch } from 'react-router-dom'
+import React from 'react';
+import { render } from 'react-dom';
+import App from './Welcome';
 
-import Welcome from './pages/Welcome'
-import Experience from './pages/Experience'
-import Projects from './pages/Projects'
-import About from './pages/About'
-
-
+import { PageHeader, Grid, Row, Col, Image } from 'react-bootstrap';
 
 render(
-  <BrowserRouter>
-      <Switch>
-        <Route path="/about" component={About} />
-        <Route path="/projects" component={Projects} />
-        <Route path="/experience" component={Experience} />
-        <Route path="/" component={Welcome} />
-      </Switch>
-  </BrowserRouter>,
+  <div>
+    <App />
+    <PageHeader>
+      Example page header <small>Subtext for header</small>
+    </PageHeader>
+    <h1>
+      <Grid>
+        <Row>
+          <Col xs={3} md={2}>
+            <Image src="../assets/runningze.jpg" rounded />
+          </Col>
+          <Col xs={6} md={4}>
+            <Image src="/thumbnail.png" circle />
+          </Col>
+        </Row>
+      </Grid>
+    </h1>
+  </div>,
   document.querySelector('#app')
-)
+);
